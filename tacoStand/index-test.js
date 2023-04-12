@@ -3,7 +3,7 @@ var { createIngredient, createTaco, addIngredientToTaco, calculatePrice } = requ
 
 describe('taco stand', function() {
   describe('createIngredient', function() {
-    it.skip('should take a name and price', function() {
+    it('should take a name and price', function() {
       const ingredient1 = createIngredient('chicken', 2.50)
       const ingredient2 = createIngredient('steak', 3.25)
 
@@ -13,7 +13,7 @@ describe('taco stand', function() {
       assert.equal(ingredient2.price, 3.25)
     })
 
-    it.skip('should return an ingredient with defaults if nothing is passed', function() {
+    it('should return an ingredient with defaults if nothing is passed', function() {
       const defaultIngredient = createIngredient()
 
       assert.equal(defaultIngredient.name, 'unknown')
@@ -22,31 +22,33 @@ describe('taco stand', function() {
   })
 
   describe('createTaco', function() {
-    it.skip('should have a name', function() {
+    it('should have a name', function() {
       const southwestTaco = createTaco('southwestern')
 
       assert.equal(southwestTaco.name, 'southwestern')
     })
 
-    it.skip('should have a default name if none provided', function() {
+    it('should have a default name if none provided', function() {
       const southwestTaco = createTaco()
 
       assert.equal(southwestTaco.name, 'custom')
     })
 
-    it.skip('should have no ingredients by default', function() {
+    it('should have no ingredients by default', function() {
       const bajaTaco = createTaco('baja')
 
       assert.deepEqual(bajaTaco.ingredients, [])
     })
 
-    it.skip('should be able to create a taco with ingredients', function() {
+    it('should be able to create a taco with ingredients', function() {
       const fish = createIngredient('fish', 2.95)
       const hotSauce = createIngredient('siracha mayo', 0.95)
       const lettuce = createIngredient('lettuce', 0.50)
 
       const ingredients = [fish, hotSauce, lettuce]
+     //console.log(ingredients)
       const bajaTaco = createTaco('baja', ingredients)
+     // console.log(ingredients)
 
       assert.deepEqual(bajaTaco.ingredients, ingredients)
     })

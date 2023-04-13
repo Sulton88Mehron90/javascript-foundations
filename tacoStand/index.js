@@ -12,8 +12,8 @@ function createIngredient(name, price){
 };
 
 function createTaco(name, ingredients){
-  //console.log(name)
- // console.log(ingredients)
+ //console.log(name)
+// console.log(ingredients)
 
   var tacoInfo ={
     name: 'custom',
@@ -30,7 +30,28 @@ function createTaco(name, ingredients){
   return tacoInfo
 };
 
+function addIngredientToTaco(tacoInfo, ingrediant){
+//console.log(ingrediant)
+  
+  tacoInfo.ingredients.push(ingrediant)
+  if(!ingrediant){
+    tacoInfo.ingrediants;
+  }
+  return tacoInfo;
+};
+
+function calculatePrice(tacoInfo){
+  console.log(tacoInfo)
+ // { name: 'basic steak', ingredients: [ { name: 'steak', price: 3.5 } ] }
+ingrediant.price += tacoInfo
+
+  return ingrediant.price
+}
+
+
 module.exports = {
     createIngredient,
-    createTaco
+    createTaco,
+    addIngredientToTaco,
+    calculatePrice
 }

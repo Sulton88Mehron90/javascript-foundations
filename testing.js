@@ -56,8 +56,8 @@ function checkAirlineLocations(airportList, airline) {
   };
 
   function searchByAuthor(collection, author){
-    console.log('p:', collection[1])
-    console.log(author)
+    // console.log('p:', collection[1])
+    // console.log(author)
     var searchResults = [];
     for(var i = 0; i < collection.length; i++){
       if(collection[i].author === author){

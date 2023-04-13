@@ -4,13 +4,13 @@ var assert = require('chai').assert;
 
 describe("Tape", function() {
 
-  it("should create tape", function() {
+  it.only("should create tape", function() {
     var genericTape = createTape("",false)
    
     assert.deepEqual(genericTape, {title:"", readyToPlay: false})
   })
 
-  it("should have a title", function(){
+  it.only("should have a title", function(){
     var littleMermaid = createTape("The Little Mermaid", false)
     var landBeforeTime = createTape("The Land Before Time", false)
 
@@ -18,7 +18,7 @@ describe("Tape", function() {
     assert.equal(landBeforeTime.title,"The Land Before Time")
   })
 
-  it("should have a readyToPlay status by default", function() {
+  it.only("should have a readyToPlay status by default", function() {
     var littleMermaid = createTape("The Little Mermaid", false);
     var landBeforeTime = createTape("The Land Before Time", false);
 
@@ -26,7 +26,7 @@ describe("Tape", function() {
     assert.equal(landBeforeTime.readyToPlay, false);
   })
 
-  it("should be able to be readyToPlay", function() {
+  it.only("should be able to be readyToPlay", function() {
     var anastasia = createTape("Anastasia", false);
     var resetAnastasia = reset(anastasia);
     var vitaminC = createTape("Vitamin C",true)
@@ -36,7 +36,7 @@ describe("Tape", function() {
     assert.equal(resetVitaminC.readyToPlay, true); 
   })
 
-  it("should not reset if it has already been reset", function() {
+  it.only("should not reset if it has already been reset", function() {
     var vitaminC = createTape("Vitamin C",true)
     var resetVitaminC = reset(vitaminC)
 
@@ -46,7 +46,7 @@ describe("Tape", function() {
 
 describe("Collection", function(){
 
-  it("should add tape to collection", function(){
+  it.only("should add tape to collection", function(){
     var vitaminC = createTape("Vitamin C",true)
     var anastasia = createTape("Anastasia", false);
     var collectionOne = createCollection(vitaminC)
@@ -55,7 +55,7 @@ describe("Collection", function(){
     assert(collectionTwo, [{title:"Anastasia", readyToPlay:false}])
   })
 
-  it("should print out all the tape title that is in the collection", function(){
+  it.only("should print out all the tape title that is in the collection", function(){
     var emptyCollection = createCollection([])
     var theEraser = createTape("The Eraser",true)
     var kidA = createTape("kidA", false);

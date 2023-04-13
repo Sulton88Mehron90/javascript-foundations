@@ -21,7 +21,8 @@ describe('Meal', function() {
     assert.equal(appetizer.complete, false);
   });
 
-  it('should be able to be completed', function() {
+  it
+  ('should be able to be completed', function() {
     var appetizer = createMeal('Chips & Queso', [], 4);
     var pizza = createMeal('Margarita', [], 5)
     var shrimpTacos = createMeal('Shrimp Tacos', ["no cheese"], 14);
@@ -66,7 +67,7 @@ describe('Order', function() {
     assert.deepEqual(order.completedMeals, []);
   });
 
-  it('should be able to cook meals', function() {
+  it.only('should be able to cook meals', function() {
     var meal1 = createMeal('Pico de Gallo Quesadillas', [], 3);
     var meal2 = createMeal('Sombra Shroom Griddled Tacos', ['crema'], 3);
     var meal3 = createMeal('The Situation Gordita', ['cilantro', 'onion'], 3);

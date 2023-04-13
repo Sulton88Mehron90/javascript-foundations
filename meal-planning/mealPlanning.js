@@ -8,8 +8,8 @@ return mealInfo;
 };
 
 function addDish(mealInfo, dishes){
-    console.log(mealInfo)
-    console.log(dishes)
+    // console.log(mealInfo)
+    // console.log(dishes)
     mealInfo.dishes.push(dishes);
   if(mealInfo.calorieGoal >= dishes.calories){
     mealInfo.calorieGoal = dishes.calories;

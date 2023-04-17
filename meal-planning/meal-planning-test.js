@@ -1,8 +1,9 @@
 var { createMeal, addDish, calculateCalories } = require('./mealPlanning.js');
-var assert = require('chai').assert;
 
+var assert = require('chai').assert;
 describe("Meal Planning", function () {
-  it("should create a meal with a dynamic type and calorie goal", function() {
+
+  it.only("should create a meal with a dynamic type and calorie goal", function() {
     var easyBreakfast = createMeal('breakfast', 700);
     var simpleLunch = createMeal("lunch", 400);
 
@@ -12,19 +13,19 @@ describe("Meal Planning", function () {
     assert.equal(simpleLunch.calorieGoal, 400);
   });
 
-  it("should default to having no dishes", function() {
+  it.only("should default to having no dishes", function() {
     var breakfast = createMeal('breakfast', 700);
     assert.deepEqual(breakfast.dishes, []);
   });
 
-  it("should add a dish to a meal", function() {
+  it.only("should add a dish to a meal", function() {
     var meal = createMeal("dinner", 500);
     var mealWithSpaghetti = addDish(meal, { name: "spaghetti", calories: 300 });
 
     assert.deepEqual(mealWithSpaghetti.dishes, [{ name: "spaghetti", calories: 300 }]);
   });
 
-  it("should add another dish to a meal", function() {
+  it.only("should add another dish to a meal", function() {
     var meal = createMeal("dinner", 600);
     var mealWithSpaghetti = addDish(meal, { name: "spaghetti", calories: 300 });
     var mealWithBread = addDish(mealWithSpaghetti, { name: "garlic bread", calories: 200 });
@@ -32,7 +33,7 @@ describe("Meal Planning", function () {
     assert.deepEqual(mealWithBread.dishes, [{ name: "spaghetti", calories: 300 }, { name: "garlic bread", calories: 200 }]);
   });
 
-  it("should only add a dish if it meets or is below the meal's calorie goal", function() {
+  it.only("should only add a dish if it meets or is below the meal's calorie goal", function() {
     var meal = createMeal("dinner", 700);
     var mealWithBread = addDish(meal, { name: "garlic bread", calories: 200 });
 

@@ -52,12 +52,12 @@ Completing all of these test suites is not necessary, but you should be working 
 - [x] 💵 [Vending Machine](./dollar-store-vending-machine/)
 - [x] 🛗 [Elevator](./elevator/)
 - [x] 📚 [Library](./library)
-- [ ] 🌮 [Taco Stand](./tacoStand/)
-- [ ] ✂️ [Barber Shop](./barber-shop/)
+- [x] 🌮 [Taco Stand](./tacoStand/)
+- [x] ✂️ [Barber Shop](./barber-shop/)
 - [ ] 🥗 [Meal Planning](./meal-planning/)
-- [ ] 🍜 [Restaurant](./restaurant/)
+- [x] 🍜 [Restaurant](./restaurant/)
 - [x] 🧖‍♀️ [Spa](./spa/)
-- [ ] 🎵 [Spotify](./spotify/)
+- [x] 🎵 [Spotify](./spotify/)
 - [ ] 📼 [VHS](./vhs/)
 
 - [x] Want to track your progress? First, make sure you're on a forked version of this repo. Then, you can edit the README and change `[ ]` to `[x]` on the suites you've completed!

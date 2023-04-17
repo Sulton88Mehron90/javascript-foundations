@@ -78,3 +78,33 @@ function checkAirlineLocations(airportList, airline) {
  
      return barberInfo;
  };
+
+ //barber. create an array outside of the for loop.
+ it('should be able to list style options based on desired length', function() {
+  var buzzCut = { style: 'buzz', hairLength: 'short', price: 8.00 };
+  var sidePartCut = { style: 'side part', hairLength: 'medium', price: 10.00 };
+  var bobCut = { style: 'bob', hairLength: 'short', price: 12.00 };
+
+  var knownCuts = [ buzzCut, sidePartCut, bobCut];
+
+  var sandy = createBarber('Sandy', 30.00, knownCuts);
+
+  var shortStyles = listStyles(sandy, 'short');
+
+  assert.equal(shortStyles.length, 2);
+  assert.deepEqual(shortStyles, [ 'buzz', 'bob' ]);
+})
+
+ function listStyles(barberInfo,hairLength){
+  console.log('p:',barberInfo)
+  console.log('p:', hairLength)
+  
+  var shortStyles = [];
+
+  for(var i = 0; i < barberInfo.haircuts.length; i++){
+    if(barberInfo.haircuts[i].hairLength === hairLength){
+      shortStyles.push(barberInfo.haircuts[i].style);
+    };
+  };
+  return shortStyles;
+};

@@ -34,33 +34,27 @@ function addTrack(collectionInfo, trackInfo){
 };
 
 function getTotalDuration(collectionInfo){
-
   var totalDuration = 0;
 
   for(var i = 0; i < collectionInfo.tracks.length; i++){
     totalDuration += collectionInfo.tracks[i].duration;
-
-   // console.log(totalDuration)
   };
+
   return totalDuration;
 };
 
 function findTracksByArtist(collectionInfo, artist){
-  console.log(collectionInfo)
-  console.log(artist)
 
+  var tracksList = [];
+  
   for(var i = 0; i < collectionInfo.tracks.length; i++){
-    var tracksList = [];
+    
     if(collectionInfo.tracks[i].artist === artist){
       
       tracksList.push(collectionInfo.tracks[i]);
-      console.log(tracksList)
     };
-
-    return collectionInfo.tracks;
   };
-
-
+  return tracksList;
 };
 
 

@@ -72,6 +72,7 @@ describe('Spotify collections', function() {
         var chillHitsWith1Track = addTrack(chillHits, track1);
         var chillHitsWith2Track =  addTrack(chillHitsWith1Track, track2);
         var chillHitsWith3Track = addTrack(chillHitsWith2Track, track3);
+        
         assert.deepEqual(findTracksByArtist(chillHitsWith3Track, 'The Midnight'), [track1, track3]);
       });
     

@@ -4,7 +4,7 @@ function createBarber(name, earnings, haircuts){
     earnings,
     haircuts
   };
-  if(barberInfo.earnings === undefined || barberInfo.haircuts === undefined){
+  if(barberInfo.earnings === undefined || barberInfo.  haircuts === undefined){
     barberInfo.earnings = 0;
     barberInfo.haircuts = [];
   }
@@ -25,8 +25,6 @@ function cutHair(barberInfo, haircuts){
 };
 
 function cutHair(barberInfo, cutInfo){
-  console.log('p:',barberInfo)
-  console.log('p:', cutInfo)
 
   barberInfo.earnings = 0;
 
@@ -38,8 +36,23 @@ function cutHair(barberInfo, cutInfo){
   return barberInfo;
 };
 
+function listStyles(barberInfo,hairLength){
+  console.log('p:',barberInfo)
+  console.log('p:', hairLength)
+  
+  var shortStyles = [];
+
+  for(var i = 0; i < barberInfo.haircuts.length; i++){
+    if(barberInfo.haircuts[i].hairLength === hairLength){
+      shortStyles.push(barberInfo.haircuts[i].style);
+    };
+  };
+  return shortStyles;
+};
+
 module.exports = { 
     createBarber,
     giveCompliment,
-    cutHair
+    cutHair,
+    listStyles
  };

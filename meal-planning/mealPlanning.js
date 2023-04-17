@@ -1,26 +1,27 @@
-function createMeal(type, calorieGoal){
-  var mealInfo ={
-    type,
-    calorieGoal,
+function createMeal(type,calorieGoal){
+ 
+  var mealInfo = {
+    type: type,
+    calorieGoal:calorieGoal,
     dishes: []
   };
-return mealInfo;
+  return mealInfo;
 };
+function addDish(mealInfo, dish){
+  console.log(mealInfo)
+  console.log(dish)
 
-function addDish(mealInfo, dishes){
-    // console.log(mealInfo)
-    // console.log(dishes)
-    mealInfo.dishes.push(dishes);
-  if(mealInfo.calorieGoal >= dishes.calories){
-    mealInfo.calorieGoal = dishes.calories;
-  }else{
-    mealInfo.dishes.length = 0
+  mealInfo.dishes.push(dish);
+
+  if(mealInfo.calorieGoal >= dish.colories){
+    mealInfo.dishes.push(dish);
+    mealInfo.alorieGoal = mealInfo.calorieGoal - dish.colories;
   };
   return mealInfo;
 };
 
 
 module.exports = {
-    createMeal,
-    addDish
+  createMeal,
+  addDish
  }

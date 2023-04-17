@@ -46,7 +46,7 @@ describe("Meal Planning", function () {
     assert.equal(mealWithPizza.dishes.length, 0);
   });
 
-  it("should update the calorieGoal when dishes are added", function() {
+  it.only("should update the calorieGoal when dishes are added", function() {
     var meal = createMeal("breakfast", 400);
     var mealWithEggs = addDish(meal, { name: "eggs", calories: 200 });  
 
@@ -57,7 +57,7 @@ describe("Meal Planning", function () {
     assert.equal(mealWithPancake.calorieGoal, 20);
   });
 
-  it.skip("should calculate the total meal calories", function() {
+  it.only("should calculate the total meal calories", function() {
     var brunch = createMeal("brunch", 700);
     var brunchWithOmelette = addDish(brunch, { name: "omelette", calories: 450 });
     var brunchWithFruit = addDish(brunchWithOmelette, { name: "fruit", calories: 100 });
@@ -67,7 +67,7 @@ describe("Meal Planning", function () {
     assert.equal(totalCalorieCount, "brunch has a total of 550 calories.");
   });
 
-  it.skip("should calculate a different meal's calories", function() {
+  it.only("should calculate a different meal's calories", function() {
     var dinner = createMeal("dinner", 1200);
     var dinnerWithSoup = addDish(dinner, { name: "soup", calories: 250 });
     var dinnerWithBeans = addDish(dinnerWithSoup, { name: "green beans", calories: 200 });

@@ -8,20 +8,29 @@ function createMeal(type,calorieGoal){
   return mealInfo;
 };
 function addDish(mealInfo, dish){
-  console.log(mealInfo)
-  console.log(dish)
 
-  mealInfo.dishes.push(dish);
+  // mealInfo.dishes.push(dish);
 
-  if(mealInfo.calorieGoal >= dish.colories){
+  if(mealInfo.calorieGoal >= dish.calories){
     mealInfo.dishes.push(dish);
-    mealInfo.alorieGoal = mealInfo.calorieGoal - dish.colories;
+
+    mealInfo.calorieGoal = mealInfo.calorieGoal - dish.calories;
   };
   return mealInfo;
+};
+
+function calculateCalories(mealInfo){
+  console.log(mealInfo)
+  var total = 0;
+  for(var i = 0; i < mealInfo.dishes.length; i++){
+    total += mealInfo.dishes[i].calories;
+  };
+  return `${mealInfo.type} has a total of ${total} calories.`
 };
 
 
 module.exports = {
   createMeal,
-  addDish
+  addDish,
+  calculateCalories
  }
